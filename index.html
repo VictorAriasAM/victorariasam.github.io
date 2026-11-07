@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://victorariasam.github.io/assets/dimension-x-bosque.webp">
   <meta property="og:url" content="https://victorariasam.github.io/">
-  <title>VikBox 2.1 — Proyectos y acceso al código</title>
+  <title>VikBox 2.2 — Fragmentos reales de código</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <style>
     :root {
@@ -366,7 +366,7 @@
           <div class="dimension-video-copy"><div class="dimension-label"><span class="dot"></span> Behind the scenes</div><h3>De una idea a una <span class="gradient-text">pantalla jugable.</span></h3><p>Un vistazo real a las pruebas del prototipo en Godot. Aquí comparto avances, cambios visuales y experimentos mientras voy desarrollando DIMENSION X.</p><div class="video-note"><svg class="icon"><use href="#i-play"/></svg><span>Video del proceso · grabado durante el desarrollo</span></div></div>
           <video controls playsinline preload="metadata" poster="assets/dimension-x-video-poster.jpg" aria-label="Video del prototipo DIMENSION X funcionando en Godot"><source src="assets/dimension-x-demo.mp4" type="video/mp4">Tu navegador no admite este video.</video>
         </div>
-        <div class="other-projects-heading"><div><p class="kicker">Más proyectos / vista previa</p><h3>Explora la idea. Solicita el código.</h3></div><span>Demos y ejemplos sin publicar todo el código fuente</span></div>
+        <div class="other-projects-heading"><div><p class="kicker">Más proyectos / vista previa</p><h3>Conoce mi código. Explora cada proyecto.</h3></div><span>Fragmentos reales y demos sin publicar todo el código fuente</span></div>
         <div class="filter-row" role="group" aria-label="Filtrar proyectos">
           <button class="filter" type="button" data-filter="all" aria-pressed="true">Todos</button>
           <button class="filter" type="button" data-filter="fullstack" aria-pressed="false">Full stack</button>
@@ -378,47 +378,64 @@
         <div class="projects-grid" id="projects-grid">
           <article class="project-card" data-categories="fullstack backend">
             <div class="project-visual visual-java"><div class="visual-window"><div class="head"><i></i><i></i><i></i></div><div class="dash"><div class="dash-side"></div><div class="dash-main"><div class="line"></div><div class="line"></div><div class="line"></div></div></div></div></div>
-            <div class="project-info"><div class="project-topline">01 · Gestión de usuarios</div><h3>CRUD Web · Java</h3><p>Sistema con autenticación, dashboard y gestión de usuarios. Backend en Spring Boot y base de datos MySQL.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>MySQL</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · Java / Spring Boot</summary><div class="source-inner"><div class="source-head"><span>Código de muestra</span><span>🔒 Código completo por aportación</span></div><pre><code>@RestController
-@RequestMapping(&quot;/api/usuarios&quot;)
-class UsuariosController {
-    // Lógica de ejemplo...
-}</code></pre><p>Vista didáctica ilustrativa. No es código fuente original del proyecto.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
+            <div class="project-info"><div class="project-topline">01 · Gestión de usuarios</div><h3>CRUD Web · Java</h3><p>Sistema con autenticación, dashboard y gestión de usuarios. Backend en Spring Boot y base de datos MySQL.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>MySQL</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · Java · CrudwebApplication.java</summary><div class="source-inner"><div class="source-head"><span>Fragmento real · Java · CrudwebApplication.java</span><span>🔒 Código completo por aportación</span></div><pre><code>package com.victor.crudweb;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CrudwebApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(CrudwebApplication.class, args);
+    }
+}</code></pre><p>Fragmento real del archivo CrudwebApplication.java, correspondiente al punto de entrada de Spring Boot.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
           </article>
           <article class="project-card" data-categories="fullstack frontend backend">
             <div class="project-visual visual-stock"><svg class="stock-graph" viewBox="0 0 310 150" role="img" aria-label="Gráfica ilustrativa de precios, no datos reales"><path d="M5 28H305M5 65H305M5 102H305M5 140H305" stroke="#456388" stroke-width=".8" stroke-dasharray="3 7"/><path class="area" d="M7 125 36 109 59 115 78 72 104 82 130 59 157 79 189 39 213 48 245 19 272 27 303 7 303 147 7 147Z"/><polyline points="7,125 36,109 59,115 78,72 104,82 130,59 157,79 189,39 213,48 245,19 272,27 303,7"/></svg></div>
-            <div class="project-info"><div class="project-topline">02 · Finanzas & APIs</div><h3>Bolsa en tiempo real</h3><p>Aplicación con React y Node.js que consulta cotizaciones mediante una API financiera y muestra gráficas interactivas.</p><div class="tags"><span>React</span><span>Node.js</span><span>APIs REST</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · React / JavaScript</summary><div class="source-inner"><div class="source-head"><span>Código de muestra</span><span>🔒 Código completo por aportación</span></div><pre><code>async function cargarCotizaciones() {
-  // Consultar API de precios
-  return []
-}</code></pre><p>Vista didáctica ilustrativa. No es código fuente original del proyecto.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
+            <div class="project-info"><div class="project-topline">02 · Finanzas & APIs</div><h3>Bolsa en tiempo real</h3><p>Aplicación con React y Node.js que consulta cotizaciones mediante una API financiera y muestra gráficas interactivas.</p><div class="tags"><span>React</span><span>Node.js</span><span>APIs REST</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · JavaScript · server.js</summary><div class="source-inner"><div class="source-head"><span>Fragmento real · JavaScript · server.js</span><span>🔒 Código completo por aportación</span></div><pre><code>const getStockPrice = async (symbol) =&gt; {
+    const url = `https://finnhub.io/api/v1/quote?symbol=${symbol}&amp;token=${FINNHUB_API_KEY}`;
+    const response = await axios.get(url);
+    return response.data.c; // precio actual
+};</code></pre><p>Fragmento real de server.js: consulta de cotizaciones. La clave se lee de una variable de entorno.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
           </article>
           <article class="project-card" data-categories="fullstack backend python">
             <div class="project-visual visual-python"><div class="python-icon" aria-hidden="true">{Py}</div><span class="recipe-floating">Excel ✓</span></div>
-            <div class="project-info"><div class="project-topline">03 · Automatización</div><h3>Costeo de recetas</h3><p>Sistema en Flask y Python para administrar ingredientes, calcular costos y exportar reportes a Excel.</p><div class="tags"><span>Python</span><span>Flask</span><span>Excel</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · Python / Flask</summary><div class="source-inner"><div class="source-head"><span>Código de muestra</span><span>🔒 Código completo por aportación</span></div><pre><code>@app.route(&quot;/recetas&quot;)
-def recetas():
-    # Ejemplo de estructura
-    return jsonify([])</code></pre><p>Vista didáctica ilustrativa. No es código fuente original del proyecto.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
+            <div class="project-info"><div class="project-topline">03 · Automatización</div><h3>Costeo de recetas</h3><p>Sistema en Flask y Python para administrar ingredientes, calcular costos y exportar reportes a Excel.</p><div class="tags"><span>Python</span><span>Flask</span><span>Excel</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · Python · app.py</summary><div class="source-inner"><div class="source-head"><span>Fragmento real · Python · app.py</span><span>🔒 Código completo por aportación</span></div><pre><code>def calcular_costo(
+    cantidad,
+    unidad_uso,
+    precio,
+    unidad_compra
+):
+    # kg -&gt; g
+    if unidad_compra == "kg" and unidad_uso == "g":
+        return (precio / 1000) * cantidad</code></pre><p>Fragmento real de app.py: conversión de unidades para el cálculo de costos.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
           </article>
           <article class="project-card" data-categories="fullstack backend">
             <div class="project-visual visual-mongo"><div class="code-visual"><span class="soft">// usuarios</span><br>{ <span class="blue">create</span>, <span class="blue">read</span>,<br>&nbsp; <span class="blue">update</span>, <span class="blue">delete</span> }</div></div>
-            <div class="project-info"><div class="project-topline">04 · Bases de datos</div><h3>CRUD con MongoDB</h3><p>Sistema web en PHP y MongoDB con registro, autenticación y operaciones CRUD para usuarios.</p><div class="tags"><span>PHP</span><span>MongoDB</span><span>CRUD</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · PHP / MongoDB</summary><div class="source-inner"><div class="source-head"><span>Código de muestra</span><span>🔒 Código completo por aportación</span></div><pre><code>&lt;?php
-// Ejemplo CRUD
-$usuarios = $db-&gt;usuarios;
-// Operación reservada...</code></pre><p>Vista didáctica ilustrativa. No es código fuente original del proyecto.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
+            <div class="project-info"><div class="project-topline">04 · Bases de datos</div><h3>CRUD con MongoDB</h3><p>Sistema web en PHP y MongoDB con registro, autenticación y operaciones CRUD para usuarios.</p><div class="tags"><span>PHP</span><span>MongoDB</span><span>CRUD</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · PHP · Procesos/insertar.php</summary><div class="source-inner"><div class="source-head"><span>Fragmento real · PHP · Procesos/insertar.php</span><span>🔒 Código completo por aportación</span></div><pre><code>$Crud = new Crud();
+
+$datos = array(
+    "paterno" =&gt; $_POST['paterno'],
+    "materno" =&gt; $_POST['materno'],
+    "nombre" =&gt; $_POST['nombre'],
+    "fecha_nacimiento" =&gt; $_POST['fecha_nacimiento']
+);
+
+$respuesta = $Crud-&gt;insertarDatos($datos);</code></pre><p>Fragmento real de insertar.php: preparación de los datos para el registro.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
           </article>
           <article class="project-card" data-categories="fullstack backend">
             <div class="project-visual visual-health"><span class="health-plus" aria-hidden="true">+</span><span class="health-mini">✓ Citas agendadas</span></div>
-            <div class="project-info"><div class="project-topline">05 · Gestión & salud</div><h3>Sistema hospitalario</h3><p>Plataforma para gestionar personal médico, autenticación y programación de citas.</p><div class="tags"><span>PHP</span><span>MySQL</span><span>HTML & CSS</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · PHP / MySQL</summary><div class="source-inner"><div class="source-head"><span>Código de muestra</span><span>🔒 Código completo por aportación</span></div><pre><code>&lt;?php
-// Ejemplo de arquitectura
-function agendarCita($datos) {
-  // Validaciones...
-}</code></pre><p>Vista didáctica ilustrativa. No es código fuente original del proyecto.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
+            <div class="project-info"><div class="project-topline">05 · Gestión & salud</div><h3>Sistema hospitalario</h3><p>Plataforma para gestionar personal médico, autenticación y programación de citas.</p><div class="tags"><span>PHP</span><span>MySQL</span><span>HTML & CSS</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · Sistema hospitalario</summary><div class="source-inner"><div class="source-head"><span>Código pendiente de verificación</span><span>🔒 Proyecto completo por aportación</span></div><p>La descripción del sistema está verificada, pero todavía no he podido recuperar un archivo de código para mostrar aquí. No se incluye código de ejemplo.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
           </article>
           <article class="project-card" data-categories="frontend">
             <div class="project-visual visual-redlink"><div class="feed-visual"><div class="feed-column narrow"><div class="feed-bar"></div><div class="feed-bar"></div><div class="feed-bar"></div></div><div class="feed-column"><div class="feed-bar"></div><div class="feed-card"></div></div><div class="feed-column narrow"><div class="feed-bar"></div><div class="feed-bar"></div><div class="feed-bar"></div></div></div></div>
-            <div class="project-info"><div class="project-topline">06 · Interfaz social</div><h3>RedLink · Red social</h3><p>Interfaz social inspirada en Facebook con publicaciones, historias y gestión de usuarios.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · JavaScript / Frontend</summary><div class="source-inner"><div class="source-head"><span>Código de muestra</span><span>🔒 Código completo por aportación</span></div><pre><code>function crearPublicacion(data) {
-  // Ejemplo de interfaz
-  return { ...data }
-}</code></pre><p>Vista didáctica ilustrativa. No es código fuente original del proyecto.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
+            <div class="project-info"><div class="project-topline">06 · Interfaz social</div><h3>RedLink · Red social</h3><p>Interfaz social inspirada en Facebook con publicaciones, historias y gestión de usuarios.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><details class="source-preview"><summary><span class="preview-eye">⌘</span> Vista previa · HTML · index.html</summary><div class="source-inner"><div class="source-head"><span>Fragmento real · HTML · index.html</span><span>🔒 Código completo por aportación</span></div><pre><code>&lt;header&gt;
+  &lt;nav class="navbar"&gt;
+    &lt;div class="nav-left"&gt;
+      &lt;img src="./images/logo.png" alt="Logo de MediaBook" class="logo"&gt;
+      &lt;label for="search" class="sr-only"&gt;Buscar&lt;/label&gt;
+      &lt;input id="search" type="search" placeholder="Buscar en MediaBook"&gt;
+    &lt;/div&gt;</code></pre><p>Fragmento real de index.html: encabezado y búsqueda de la interfaz social. Se muestran solo unas líneas.</p></div></details><a class="project-link locked-link" href="#apoyar"><span aria-hidden="true">🔒</span> Solicitar código completo <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
           </article>
         </div>
       </div>
@@ -429,7 +446,7 @@ function agendarCita($datos) {
     <div class="support-content">
       <div class="support-flag"><span>✦</span> APOYA EL DESARROLLO INDEPENDIENTE</div>
       <h2 id="support-title">¿Te interesa el <span class="gradient-text">código completo?</span></h2>
-      <p class="support-lead">Puedes explorar mis proyectos, ver sus demos y una muestra de su estructura. Para obtener el código fuente completo o el proyecto descargable se requiere una aportación económica. Escríbeme por Instagram indicando qué proyecto te interesa; confirmaré el monto, las condiciones y la forma de entrega antes de cualquier pago.</p>
+      <p class="support-lead">Puedes explorar mis proyectos, ver sus demos y fragmentos reales de su código fuente. Para obtener el código fuente completo o el proyecto descargable se requiere una aportación económica. Escríbeme por Instagram indicando qué proyecto te interesa; confirmaré el monto, las condiciones y la forma de entrega antes de cualquier pago.</p>
       <div class="access-benefits">
         <div><span class="benefit-icon">01</span><strong>Explora</strong><span>Revisa capturas, descripción y tecnologías.</span></div>
         <div><span class="benefit-icon">02</span><strong>Solicita</strong><span>Indica el nombre del proyecto que te interesa.</span></div>
